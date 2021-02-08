@@ -3,15 +3,14 @@
 
 
 def capital_small(word):
-    new_word = ""
-#     word_list = list(word)
+    new_word = []
     for char in word:
         if char == " ":
-            new_word += char
+            new_word.append(char)
         if char == char.upper():
-            new_word += char.lower()
+            new_word.append(char.lower())
         else:
-            new_word += char.upper()
-    return new_word
+            new_word.append(char.upper())
+    return "".join(new_word)
 
 print(capital_small("EduCatiON"))
